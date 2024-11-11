@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherFriend | Weather-Based Recommendations</title>
+    <link rel="stylesheet" href="./Styles/recommend.css">
+    <script src="./Javascript/2.1 jquery.js.js"></script>
+    <script src="./Javascript/loading.js" defer></script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="circles">
+            <div class="cir"></div>
+            <div class="cir cir2"></div>
+            <div class="cir cir3"></div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="brand">
+            <a href="">Recommendations</a>
+        </div>
+        <div class="links">
+            <span style="font-size: 18px;color: aliceblue;cursor: pointer;" class="prod">Products&triangledown;</span>
+            <div class="drop">
+                <a data-get="Clothes" class="load-data" href="#">Clothings</a>
+                <a data-get="Drinks" class="load-data" href="#">Drinks</a>
+                <a data-get="Meals" class="load-data" href="#">Meals</a>
+            </div>            
+        </div>
+        <div class="info">
+            <a href="./index.php">Back to Home</a>
+        </div>
+    </div>    
+    <div class="container">
+        <div id="weatherOutput"><p class="p">Loading...</p></div>
+    </div>
+    <script src="./Javascript/recommend.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".prod").click(function(e){
+               $(".drop").slideToggle("slow")
+            });
+        });
+    </script>
+</body>
+</html>

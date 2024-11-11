@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(27, 82, 104);
+    font-family: poppins,sans-serif;
+    transition: background-color .5s .5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+/* loading */
+
+.preloader{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(71, 61, 61, 0.692);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+}
+.circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.cir{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: white;
+    animation: load .8s  infinite backwards;
+}
+@keyframes load {
+    0%{
+        margin-top: -15%;
+    }
+    50%{
+        margin-top: -7.5%;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+.cir2{
+    animation-delay: .5s;
+}
+.cir3{
+    animation-delay: .2s;
+}
+/* loading */
+.header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header .brand{
+    width: 19%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .brand a{
+    text-decoration: none;
+    font-size: 19px;
+    color: aliceblue;
+}
+.header .links{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .links .prod{
+    font-size: 18px;
+    color: aliceblue;
+}
+.header .links .drop{
+    position: absolute;
+    top: 7%;
+    display: none;
+    height: auto;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 6px;
+    background-color:#ffffff36;
+}
+.drop a{
+    text-decoration: none;
+    width: 100%;
+    padding: 4px;
+    color: aliceblue;
+    transition: .5s;
+    border-radius: 7px;
+}
+.drop a:hover{
+    background-color: rgba(0, 0, 0, 0.281);
+}
+.header .info{
+    width: 19%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .info a{
+    text-decoration: none;
+    font-size: 18px;
+    color: aliceblue;
+}
+
+.container{
+    height: 74vh;
+    width: 98%;
+    margin: 2% auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+}
+.container h2,h3{
+    text-align: center;
+    color: aliceblue;
+}
+.container .weatherOutput{
+    width: 100%;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff17;
+    border-radius: 8px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h5 {
+    margin: 10px 0;
+}
+.weatherError{
+    position: fixed;
+    top: 46%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    height: auto;
+    padding: 25px;
+    width: 60%;
+    font-weight: 600;
+    box-shadow: 0px -2px 9px wheat;
+}
+
+#weatherOutput .p{
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loading .6s infinite;
+}
+@keyframes loading {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .3;
+    }
+    50%{
+        opacity: .5;
+    }
+    75%{
+        opacity: .7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+    .header .brand {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .header .brand a {
+        font-size: 23px;
+    }
+    .header .links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header span{
+        width: 85%;
+        margin: 0 auto;
+        display: none;
+    }
+    .header .links .drop {
+        position: relative;
+        background-color: rgb(27, 82, 104);
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .header .links .drop a{
+        text-align: center;
+    }
+    .header .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .container {
+        padding: 5px;
+    }
+    .header .links {
+        width: 90%;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .links .drop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header .brand a, .header .info a {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,122 @@
+/* template */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(34, 128, 165, 0.692);
+    height: 100vh;
+}
+nav{
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.123);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+}
+nav .welcome{
+    font-size: 18px;
+    width: fit-content;
+}
+nav .links{
+    width: 50%;
+    display:flex;
+    justify-content: space-around;
+}
+nav .links a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    transition: .5s;
+}
+nav .links a:hover{
+    border-radius: 2px;
+    box-shadow: 3px 2px 20px  rgba(0, 0, 0, 0.24);
+}
+
+.active{
+    border-radius: 2px;
+    box-shadow: 3px 2px 20px  rgba(0, 0, 0, 0.24);
+}
+
+nav .logout{
+    width: fit-content;
+}
+nav .logout a{
+    padding: 9px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    transition: .5s;
+}
+nav .logout a:hover{
+    border-radius: 2px;
+    box-shadow: 3px 2px 20px  rgba(0, 0, 0, 0.24);
+}
+/* close template */
+
+/* container */
+
+table
+{
+    height: auto;
+    width: 96%;
+    margin: 2% auto 0 auto;
+    border: 1px solid black;
+}
+table caption{
+    font-size: 19px;
+}
+table caption a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(255, 0, 0, 0.671)
+}
+table th ,td{
+    padding: 15px;
+}
+table td img{
+    height: 50px;
+    width: 60px;
+    border-radius: 3px;
+}
+.s{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+}
+.s a{
+    padding: 9px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    transition: .5s;
+}
+.s a:hover{
+    border-radius: 2px;
+    box-shadow: 3px 2px 20px  rgba(0, 0, 0, 0.24);
+}
+.make{
+    padding: 9px;
+    text-decoration: none;
+    background-color: green;
+    color: whitesmoke;
+    border-radius: 8px;
+    transition: .5s;
+}
+.remo{
+    padding: 9px;
+    text-decoration: none;
+    background-color: rgb(73, 46, 11);
+    color: white;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+/* container */
